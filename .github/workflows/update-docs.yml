@@ -49,7 +49,6 @@ jobs:
 
       - name: Copy docs to main repo
         run: |
-          ls -la
           cp -r ./clerk-javascript/.typedoc/docs .
           rm -rf ./clerk-javascript
 
