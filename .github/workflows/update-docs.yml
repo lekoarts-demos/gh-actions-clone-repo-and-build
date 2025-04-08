@@ -56,4 +56,6 @@ jobs:
         # Use current date in branch name
       - name: Create Pull Request
         run: gh pr create --base main --head docs-${{ env.date }} --title "[ci] Update docs (${{ env.date }})" --body "Auto-generated PR to update Typedoc documentation from clerk/javascript"
+        env:
+          GH_TOKEN: ${{ github.token }}
         
