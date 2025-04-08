@@ -1,0 +1,25 @@
+## Type declaration
+
+\{ `isLoaded`: `false`; `isSignedIn`: `undefined`; `session`: `undefined`; \}
+
+| Name         | Type        | Description                                                                                                              |
+| ------------ | ----------- | ------------------------------------------------------------------------------------------------------------------------ |
+| `isLoaded`   | `false`     | A boolean that indicates whether Clerk has completed initialization. Initially `false`, becomes `true` once Clerk loads. |
+| `isSignedIn` | `undefined` | A boolean that indicates whether a user is currently signed in.                                                          |
+| `session`    | `undefined` | Holds the current active session for the user.                                                                           |
+
+\{ `isLoaded`: `true`; `isSignedIn`: `false`; `session`: `null`; \}
+
+| Name         | Type    |
+| ------------ | ------- |
+| `isLoaded`   | `true`  |
+| `isSignedIn` | `false` |
+| `session`    | `null`  |
+
+\{ `isLoaded`: `true`; `isSignedIn`: `true`; `session`: [`SignedInSessionResource`](signed-in-session-resource.mdx); \}
+
+| Name         | Type                                                        |
+| ------------ | ----------------------------------------------------------- |
+| `isLoaded`   | `true`                                                      |
+| `isSignedIn` | `true`                                                      |
+| `session`    | [`SignedInSessionResource`](signed-in-session-resource.mdx) |

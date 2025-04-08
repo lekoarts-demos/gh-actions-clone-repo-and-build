@@ -1,0 +1,23 @@
+Previous known as `createGetAuth`. We needed to create a sync and async variant in order to allow for improvements
+that required dynamic imports (using `require` would not work).
+It powers the synchronous top-level api `getAuh()`.
+
+## Parameters
+
+| Parameter                               | Type                                                                |
+| --------------------------------------- | ------------------------------------------------------------------- |
+| `__namedParameters`                     | \{ `debugLoggerName`: `string`; `noAuthStatusMessage`: `string`; \} |
+| `__namedParameters.debugLoggerName`     | `string`                                                            |
+| `__namedParameters.noAuthStatusMessage` | `string`                                                            |
+
+## Returns
+
+### Parameters
+
+| Parameter         | Type                         |
+| ----------------- | ---------------------------- |
+| `req`             | `RequestLike`                |
+| `opts`?           | \{ `secretKey`: `string`; \} |
+| `opts.secretKey`? | `string`                     |
+
+### Returns
