@@ -49,7 +49,7 @@ jobs:
 
       - name: Copy docs to main repo
         run: |
-          cp -r ./clerk-javascript/.typedoc/docs .
+          cp -r ./clerk-javascript/.typedoc/docs/* .
           rm -rf ./clerk-javascript
 
       - name: Configure Git
@@ -61,7 +61,7 @@ jobs:
         run: |
           git checkout -b docs-${{ env.date }}
           git add .
-          git commit -m "update documentation (${{ env.date }})"
+          git commit -m "initial"
           git push origin docs-${{ env.date }}
 
       - name: Create Pull Request
