@@ -1,0 +1,29 @@
+## Deprecated
+
+use `JwtPayload` instead
+
+## Extends
+
+- [`ClerkJWTClaims`](clerk-jwt-claims.mdx)
+
+## Indexable
+
+\[`propName`: `string`\]: `unknown`
+
+## Properties
+
+| Property                              | Type                                             | Description                                                                                       | Inherited from                                                                       |
+| ------------------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| <a id="__raw"></a> ~~`__raw`~~        | `string`                                         | Encoded token supporting the `getRawString` method.                                               | -                                                                                    |
+| <a id="act"></a> ~~`act?`~~           | \{ `[x: string]`: `unknown`; `sub`: `string`; \} | JWT Actor - [RFC8693](https://www.rfc-editor.org/rfc/rfc8693.html#name-act-actor-claim).          | [`ClerkJWTClaims`](clerk-jwt-claims.mdx).[`act`](clerk-jwt-claims.mdx#act)           |
+| `act.sub`                             | `string`                                         | -                                                                                                 | -                                                                                    |
+| <a id="azp"></a> ~~`azp?`~~           | `string`                                         | JWT Authorized party - [RFC7800#section-3](https://tools.ietf.org/html/rfc7800#section-3).        | [`ClerkJWTClaims`](clerk-jwt-claims.mdx).[`azp`](clerk-jwt-claims.mdx#azp)           |
+| <a id="exp"></a> ~~`exp`~~            | `number`                                         | JWT Expiration Time - [RFC7519#section-4.1.4](https://tools.ietf.org/html/rfc7519#section-4.1.4). | [`ClerkJWTClaims`](clerk-jwt-claims.mdx).[`exp`](clerk-jwt-claims.mdx#exp)           |
+| <a id="iat"></a> ~~`iat`~~            | `number`                                         | JWT Issued At - [RFC7519#section-4.1.6](https://tools.ietf.org/html/rfc7519#section-4.1.6).       | [`ClerkJWTClaims`](clerk-jwt-claims.mdx).[`iat`](clerk-jwt-claims.mdx#iat)           |
+| <a id="iss"></a> ~~`iss`~~            | `string`                                         | JWT Issuer - [RFC7519#section-4.1.1](https://tools.ietf.org/html/rfc7519#section-4.1.1).          | [`ClerkJWTClaims`](clerk-jwt-claims.mdx).[`iss`](clerk-jwt-claims.mdx#iss)           |
+| <a id="nbf"></a> ~~`nbf`~~            | `number`                                         | JWT Not Before - [RFC7519#section-4.1.5](https://tools.ietf.org/html/rfc7519#section-4.1.5).      | [`ClerkJWTClaims`](clerk-jwt-claims.mdx).[`nbf`](clerk-jwt-claims.mdx#nbf)           |
+| <a id="org_id"></a> ~~`org_id?`~~     | `string`                                         | Active organization ID.                                                                           | [`ClerkJWTClaims`](clerk-jwt-claims.mdx).[`org_id`](clerk-jwt-claims.mdx#org_id)     |
+| <a id="org_role"></a> ~~`org_role?`~~ | `string`                                         | Active organization role.                                                                         | [`ClerkJWTClaims`](clerk-jwt-claims.mdx).[`org_role`](clerk-jwt-claims.mdx#org_role) |
+| <a id="org_slug"></a> ~~`org_slug?`~~ | `string`                                         | Active organization slug.                                                                         | [`ClerkJWTClaims`](clerk-jwt-claims.mdx).[`org_slug`](clerk-jwt-claims.mdx#org_slug) |
+| <a id="sid"></a> ~~`sid`~~            | `string`                                         | Session ID                                                                                        | [`ClerkJWTClaims`](clerk-jwt-claims.mdx).[`sid`](clerk-jwt-claims.mdx#sid)           |
+| <a id="sub"></a> ~~`sub`~~            | `string`                                         | JWT Subject - [RFC7519#section-4.1.2](https://tools.ietf.org/html/rfc7519#section-4.1.2).         | [`ClerkJWTClaims`](clerk-jwt-claims.mdx).[`sub`](clerk-jwt-claims.mdx#sub)           |

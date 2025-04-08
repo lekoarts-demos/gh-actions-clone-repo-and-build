@@ -1,0 +1,22 @@
+The async variant of our old `createGetAuth` allows for asynchronous code inside its callback.
+Should be used with function like `auth()` that are already asynchronous.
+
+## Parameters
+
+| Parameter                               | Type                                                                |
+| --------------------------------------- | ------------------------------------------------------------------- |
+| `__namedParameters`                     | \{ `debugLoggerName`: `string`; `noAuthStatusMessage`: `string`; \} |
+| `__namedParameters.debugLoggerName`     | `string`                                                            |
+| `__namedParameters.noAuthStatusMessage` | `string`                                                            |
+
+## Returns
+
+### Parameters
+
+| Parameter         | Type                         |
+| ----------------- | ---------------------------- |
+| `req`             | `RequestLike`                |
+| `opts`?           | \{ `secretKey`: `string`; \} |
+| `opts.secretKey`? | `string`                     |
+
+### Returns

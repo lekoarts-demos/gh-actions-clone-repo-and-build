@@ -1,0 +1,25 @@
+## Type declaration
+
+\{ `isLoaded`: `false`; `isSignedIn`: `undefined`; `user`: `undefined`; \}
+
+| Name         | Type        | Description                                                                                                                     |
+| ------------ | ----------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| `isLoaded`   | `false`     | A boolean that indicates whether Clerk has completed initialization. Initially `false`, becomes `true` once Clerk loads.        |
+| `isSignedIn` | `undefined` | A boolean that returns `true` if the user is signed in.                                                                         |
+| `user`       | `undefined` | The [`User`](/docs/references/javascript/user) object for the current user. If the user isn't signed in, `user` will be `null`. |
+
+\{ `isLoaded`: `true`; `isSignedIn`: `false`; `user`: `null`; \}
+
+| Name         | Type    |
+| ------------ | ------- |
+| `isLoaded`   | `true`  |
+| `isSignedIn` | `false` |
+| `user`       | `null`  |
+
+\{ `isLoaded`: `true`; `isSignedIn`: `true`; `user`: `UserResource`; \}
+
+| Name         | Type           |
+| ------------ | -------------- |
+| `isLoaded`   | `true`         |
+| `isSignedIn` | `true`         |
+| `user`       | `UserResource` |
