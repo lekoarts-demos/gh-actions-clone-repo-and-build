@@ -52,10 +52,14 @@ jobs:
           cp -r ./clerk-javascript/.typedoc/docs .
           rm -rf ./clerk-javascript
 
-        # Use GH CLI to create a pull request
-        # Use current date in branch name
+      - name: Commit and push changes
+        run: |
+          git checkout -b docs-${{ env.date }}
+          git add .
+          git commit -m "update documentation (${{ env.date }})"
+          git push origin docs-${{ env.date }}
+
       - name: Create Pull Request
         run: gh pr create --base main --head docs-${{ env.date }} --title "[ci] Update docs (${{ env.date }})" --body "Auto-generated PR to update Typedoc documentation from clerk/javascript"
         env:
           GH_TOKEN: ${{ github.token }}
-        
