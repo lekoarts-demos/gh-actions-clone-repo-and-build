@@ -1,0 +1,58 @@
+name: Generate and update docs
+
+on:
+  workflow_dispatch:
+
+jobs:
+  update-docs:
+    permissions:
+      contents: write
+      pull-requests: write
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get current date
+        id: current_date
+        run: echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+
+      - name: Checkout current repository
+        uses: actions/checkout@v4
+
+      - name: Checkout clerk/javascript
+        uses: actions/checkout@v4
+        with:
+          repository: clerk/javascript
+          path: clerk-javascript
+          fetch-depth: 0
+          show-progress: false
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+          run_install: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'pnpm'
+
+      - name: Install dependencies and build
+        working-directory: ./clerk-javascript
+        run: |
+          pnpm install
+          pnpm build
+          pnpm build:declarations
+          pnpm typedoc:generate
+
+      - name: Copy docs to main repo
+        run: |
+          rm -rf .
+          cp -r ./clerk-javascript/.typedoc/docs .
+
+        # Use GH CLI to create a pull request
+        # Use current date in branch name
+      - name: Create Pull Request
+        run: gh pr create --base main --head docs-${{ env.date }} --title "[ci] Update ${{ env.date }}" --body "Auto-generated PR to update Typedoc documentation from clerk/javascript"
+        
