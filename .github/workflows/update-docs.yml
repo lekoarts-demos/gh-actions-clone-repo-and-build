@@ -23,7 +23,7 @@ jobs:
         with:
           repository: clerk/javascript
           path: clerk-javascript
-          fetch-depth: 0
+          fetch-depth: 1
           show-progress: false
 
       - name: Install pnpm
@@ -49,8 +49,9 @@ jobs:
 
       - name: Copy docs to main repo
         run: |
-          rm -rf .
+          ls -la
           cp -r ./clerk-javascript/.typedoc/docs .
+          rm -rf ./clerk-javascript
 
         # Use GH CLI to create a pull request
         # Use current date in branch name
