@@ -37,6 +37,7 @@ jobs:
         with:
           node-version: '22'
           cache: 'pnpm'
+          cache-dependency-path: 'clerk-javascript/pnpm-lock.yaml'
 
       - name: Install dependencies and build
         working-directory: ./clerk-javascript
