@@ -1,0 +1,34 @@
+Represents a session resource that has completed sign-in but has pending tasks
+
+## Extends
+
+- [`SessionResource`](session-resource.mdx)
+
+## Properties
+
+| Property                                                   | Type                                                         | Description                                                                                                                                             | Overrides                                                                         | Inherited from                                                                                                  |
+| ---------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| <a id="end"></a> `end`                                     | () => `Promise`\<[`SessionResource`](session-resource.mdx)\> | Marks the session as ended. The session will no longer be active for this `Client` and its status will become **ended**.                                | -                                                                                 | [`SessionResource`](session-resource.mdx).[`end`](session-resource.mdx#end)                                     |
+| <a id="factorverificationage"></a> `factorVerificationAge` | <code>null \| \[number, number\]</code>                      | An array where each item represents the number of minutes since the last verification of a first or second factor: `[firstFactorAge, secondFactorAge]`. | -                                                                                 | [`SessionResource`](session-resource.mdx).[`factorVerificationAge`](session-resource.mdx#factorverificationage) |
+| <a id="id"></a> `id`                                       | `string`                                                     | The unique identifier for the session.                                                                                                                  | -                                                                                 | [`SessionResource`](session-resource.mdx).[`id`](session-resource.mdx#id)                                       |
+| <a id="pathroot"></a> `pathRoot`                           | `string`                                                     | The root path of the resource.                                                                                                                          | -                                                                                 | [`SessionResource`](session-resource.mdx).[`pathRoot`](session-resource.mdx#pathroot)                           |
+| <a id="status"></a> `status`                               | `"pending"`                                                  | The current state of the session.                                                                                                                       | [`SessionResource`](session-resource.mdx).[`status`](session-resource.mdx#status) | -                                                                                                               |
+| <a id="user"></a> `user`                                   | `UserResource`                                               | The user associated with the session.                                                                                                                   | [`SessionResource`](session-resource.mdx).[`user`](session-resource.mdx#user)     | -                                                                                                               |
+
+## Methods
+
+### reload()
+
+Reload the resource and return the resource itself.
+
+#### Parameters
+
+| Parameter | Type                        |
+| --------- | --------------------------- |
+| `p`?      | `ClerkResourceReloadParams` |
+
+#### Returns
+
+#### Inherited from
+
+[`SessionResource`](session-resource.mdx).[`reload`](session-resource.mdx#reload)

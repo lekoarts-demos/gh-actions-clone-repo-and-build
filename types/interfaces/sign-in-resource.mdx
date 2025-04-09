@@ -1,0 +1,32 @@
+The `SignIn` object holds the state of the current sign-in and provides helper methods to navigate and complete the sign-in process. It is used to manage the sign-in lifecycle, including the first and second factor verification, and the creation of a new session.
+
+## Extends
+
+- [`ClerkResource`](clerk-resource.mdx)
+
+## Properties
+
+| Property                                                     | Modifier   | Type                              | Description                                                             | Inherited from                                                                  |
+| ------------------------------------------------------------ | ---------- | --------------------------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| <a id="id"></a> `id?`                                        | `readonly` | `string`                          | The unique identifier of the resource.                                  | [`ClerkResource`](clerk-resource.mdx).[`id`](clerk-resource.mdx#id)             |
+| <a id="pathroot"></a> `pathRoot`                             | `public`   | `string`                          | The root path of the resource.                                          | [`ClerkResource`](clerk-resource.mdx).[`pathRoot`](clerk-resource.mdx#pathroot) |
+| <a id="status"></a> `status`                                 | `public`   | <code>null \| SignInStatus</code> | The current status of the sign-in.                                      | -                                                                               |
+| <a id="supportedidentifiers"></a> ~~`supportedIdentifiers`~~ | `public`   | `SignInIdentifier`[]              | **Deprecated** This attribute will be removed in the next major version | -                                                                               |
+
+## Methods
+
+### reload()
+
+Reload the resource and return the resource itself.
+
+#### Parameters
+
+| Parameter | Type                        |
+| --------- | --------------------------- |
+| `p`?      | `ClerkResourceReloadParams` |
+
+#### Returns
+
+#### Inherited from
+
+[`ClerkResource`](clerk-resource.mdx).[`reload`](clerk-resource.mdx#reload)
