@@ -49,7 +49,11 @@ jobs:
 
       - name: Copy docs to main repo
         run: |
+          # Keep only .github and .git directories
+          find . -mindepth 1 -maxdepth 1 ! -name '.github' ! -name '.git' -exec rm -rf {} +
+          # Copy the generated docs to the root of the main repo
           cp -r ./clerk-javascript/.typedoc/docs/* .
+          # Cleanup the clerk-javascript directory
           rm -rf ./clerk-javascript
 
       - name: Configure Git
